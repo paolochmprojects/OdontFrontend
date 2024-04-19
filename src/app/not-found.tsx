@@ -6,7 +6,7 @@ import Link from "next/link"
 const NotFoundPage = ()=>{
     return (
         <main className="flex flex-col flex-grow gap-5 items-center justify-center">
-            <Image className="animate-bounce" src="/toothfail.png" width={200} height={300} alt="oj"/>
+            <Image className="animate-bounce" src="/toothfail.png" width={150} height={250} alt="Not found" priority/>
             <h2 className="font-bebas text-8xl">404</h2>
             <p>Página no encontra</p>
             <Link href="/"

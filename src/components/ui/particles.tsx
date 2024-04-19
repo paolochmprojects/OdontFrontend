@@ -2,6 +2,7 @@
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { useEffect, useState } from "react";
+import { Suspense } from "react";
 
 const ParticlesComponent = () => {
     const [init, setInit] = useState(false);
@@ -16,7 +17,8 @@ const ParticlesComponent = () => {
 
 
     return (
-        init && <Particles
+        <Suspense fallback={<div>Loading...</div>}>
+        {init && <Particles
             id="tsparticles"
             options={{
                 background: {
@@ -83,10 +85,9 @@ const ParticlesComponent = () => {
                 },
                 detectRetina: true,
             }}
-        />
-
-    )
-        ;
+        />}
+        </Suspense>
+    );
 };
 
 export default ParticlesComponent;

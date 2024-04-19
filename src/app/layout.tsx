@@ -19,19 +19,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} ${bebasNeue.variable}`}><ThemeProvider
+    <html lang="es" >
+      <body className={`${inter.className} ${bebasNeue.variable}`}>
+        <ThemeProvider
         attribute="class"
-        defaultTheme="dark"
+        defaultTheme="system"
         enableSystem
-        disableTransitionOnChange
       >
         <div className="flex flex-col min-h-screen">
           <Header />
           {children}
           <Footer />
         </div>
-      </ThemeProvider></body>
+      </ThemeProvider>
+      </body>
     </html>
   );
 }

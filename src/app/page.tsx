@@ -16,7 +16,7 @@ export default async function Home() {
         <div className="flex items-start dark:invert justify-center">
           <Image
             className="hover:scale-110 transition-all ease-in-out duration-300"
-            src="/dental-31726_640.png" alt="hola" width={300} height={300} />
+            src="/dental-31726_640.png" alt="hola" width={300} height={300} priority/>
         </div>
       </section>
       <ParticlesComponent />
