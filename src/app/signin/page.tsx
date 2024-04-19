@@ -14,7 +14,6 @@ import Link from "next/link"
 
 const SignInPage = () => {
     return (<main className="flex container flex-grow justify-center items-center">
-        <ParticlesComponent/>
         <Card className="bg-primary-foreground/75 w-[350px]">
             <CardHeader>
                 <CardTitle className="text-5xl font-bebas">Inicia sesion</CardTitle>
@@ -24,8 +23,8 @@ const SignInPage = () => {
                 <form id="signinForm">
                     <div className="grid w-full items-center gap-8">
                         <div className="flex flex-col space-y-1.5">
-                            <Label htmlFor="name">Correo</Label>
-                            <Input id="name" type="email" placeholder="tucorreo@odont.pro" required/>
+                            <Label htmlFor="email">Correo</Label>
+                            <Input id="email" type="email" placeholder="tucorreo@odont.pro" required/>
                         </div>
                         <div className="flex flex-col space-y-1.5">
                             <Label htmlFor="name">Contraseña</Label>
@@ -39,6 +38,7 @@ const SignInPage = () => {
                 <Button form="signinForm">Enviar</Button>
             </CardFooter>
         </Card>
+        <ParticlesComponent/>
     </main>)
 }
 
